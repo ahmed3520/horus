@@ -10,7 +10,7 @@ const RecentCard = () => {
 }
   return (
     <>
-      <div className='content grid3 mtop'>
+      <div className='content grid3 mtop crd-exp'>
         {list.map((val, index) => {
           const { cover, category, location, name, price, type } = val
           return (

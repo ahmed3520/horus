@@ -15,13 +15,15 @@ const Header = () => {
             <span>King Tut Tours</span>
           </div>
           <div className='nav'>
-            <ul className={navList ? "small" : "flex"}>
+            {navList&&
+            (<ul className={navList ? "small" : "flex"}>
               {nav.map((list, index) => (
                 <li key={index}>
                   <Link to={list.path}>{list.text}</Link>
                 </li>
               ))}
-            </ul>
+            </ul>)
+}
           </div>
           
 

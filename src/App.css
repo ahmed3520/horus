@@ -9,7 +9,7 @@ body {
   background-color: #fff;
 }
 .container {
-  max-width: 80%;
+  max-width: 85%;
   margin: auto;
 }
 .flex {
@@ -27,7 +27,7 @@ ul {
 }
 button {
   border-radius: 5px;
-  padding: 17px 30px;
+padding: 14px 25px;
   background: #27ae60;
   border: none;
   color: #fff;
@@ -97,7 +97,7 @@ img {
 }
 .btn2 {
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 11px;
 }
 .grid4 {
   display: grid;
@@ -285,4 +285,89 @@ flex-wrap: wrap;
 .td p{
   font-size: 14px;
 color: #000;
+}
+.filter-h{
+  width: 25%;
+  justify-content: center;
+  margin-top: 0.8em;
+}
+.filter-h h4{
+  margin-right: 0.5em;
+}
+@media (max-width:1300px) {
+  .container{
+    max-width: 100%;
+    width: 95%;
+  }
+  .whatsapp_float{
+    left: 0px !important;
+  }
+}
+@media (max-width:1100px){
+  .crd-exp{
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 30px;
+  }
+  .filter-h{
+    padding: 0.5em !important;
+  }
+  .filter-h h4{
+    font-weight: 400 !important;
+  }
+}
+@media (max-width:1050px){
+  .filter-h{
+    width: 28%;
+  }
+  .location .overlay::after{
+    width: 408px;
+    height: 270px;
+  }
+}
+@media (max-width:950px){
+  .filter-h{
+    width: 35% !important;
+  }
+ 
+}
+@media (max-width:780px){
+  .box{
+    width: 50%; 
+  }
+  .featured img{
+    object-fit: cover;
+  }
+  .crd-exp .box{
+    width: 100%;
+  }
+  header div:nth-child(1){
+    height: 51px;
+  }
+}
+@media (max-width:650px){
+  .location .overlay::after {
+    width: 200px;
+    height: 150px;
+  }
+  .location{
+    display: none;
+  }
+  .crd-exp{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .filter-h{
+    width: 55% !important;
+  }
+}
+@media (max-width:500px){
+  .box{
+    width: 45%;
+  }
+}
+@media (max-width:400px){
+  .filter-h h4{
+    display: none;
+  }
 }

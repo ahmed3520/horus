@@ -11,7 +11,6 @@ const Recent = () => {
         <div className='container'>
           <Heading title='Recent Trips Visited' subtitle='This Trips May Like You Have A Nice Holidy With King TUT .' />
           <RecentCard />
-          <Price/>
           
         </div>
       </section>

@@ -23,12 +23,13 @@ const Hero = () => {
               <span>Price Range</span>
               <input type='text' placeholder='Price Range' />
             </div>
-            <div className='box'>
+            <div className='box filter-h flex align-center'>
               <h4>Advance Filter</h4>
-            </div>
-            <button className='btn1'>
+              <button className='btn1'>
               <i className='fa fa-search'></i>
             </button>
+            </div>
+
           </form>
         </div>
       </section>

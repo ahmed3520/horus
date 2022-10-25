@@ -53,9 +53,7 @@ header {
       padding: 0px;
       display: flex;
     }
-    header img {
-      margin-top: 400px;
-    }
+
     header .button {
       display: none;
     }
