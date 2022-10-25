@@ -1,0 +1,27 @@
+.services {
+    margin-bottom: 80px;
+
+  }
+  .services .heading {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .services p {
+    font-size: 15px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    .services .container {
+      flex-direction: column;
+    }
+    .services p {
+      padding: 0;
+    }
+    .services .container img {
+      margin-top: 50px;
+      margin-right: 0px;
+    }
+  }

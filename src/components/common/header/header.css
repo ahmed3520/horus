@@ -1,0 +1,84 @@
+header {
+    background-color: #fff;
+    color: black;
+    height: 10vh;
+    box-shadow: 0 5px 30px rgb(0 22 84 / 10%);
+    padding: 15px 0;
+    position:static;
+    top: 0;
+    z-index: 99999;
+  }
+  header img {
+    width: 40px;
+    height:50px ;
+  }
+  header a {
+    margin-left: 30px;
+    transition: 0.5s;
+    font-weight: 500;
+  }
+  header title  {
+    color: black;
+  }
+  header head {
+    color: blue;
+  }
+  header a:hover {
+    color: #27ae60;
+  }
+  header span {
+    width: auto;
+    padding: 0px 6px;
+    background:#fff;
+    border-radius: 50px;
+    color:black;
+    margin-right: 4px;
+    font-weight: 4000;
+    position: static;
+    font-style:italic;
+    margin-top:8px ;
+    top:0px;
+    bottom:40px ;
+
+  }
+  header h4 {
+    font-weight: 500;
+    margin-right: 20px;
+  }
+  header .toggle {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 0px;
+      display: flex;
+    }
+    header img {
+      margin-top: 400px;
+    }
+    header .button {
+      display: none;
+    }
+    header .nav .flex {
+      display:flex;
+      width: 50px;
+      height: 100px;
+    }
+    header .toggle {
+      display: block;
+      margin-top: 20px;
+    }
+    header .small {
+      position: absolute;
+      top: 10vh;
+      left: 0;
+      width: 100%;
+      background-color: #27ae60;
+      padding: 20px;
+    }
+    header li a {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+  }
