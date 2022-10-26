@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className='legal'>
-        <span>© 2022 King TUT Tours. Designd By NourEldein.</span>
+        <span>© 2022 Soho Tours Egy. Designd By NourEldein.</span>
       </div>
     </>
   )

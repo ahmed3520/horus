@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       <section className='hero'>
         <div className='container'>
-          <Heading title='Search Your Next King TUT Trip ' subtitle='Find new & featured King TUT Trips.' />
+          <Heading title='Search Your Next Soho Tours Egy Trip ' subtitle='Find new & featured Soho Tours EgyT Trips.' />
 
           <form className='flex'>
             <div className='box'>

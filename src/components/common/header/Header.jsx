@@ -11,8 +11,8 @@ const Header = () => {
       <header>
         <div className='container flex'>
           <div className='logo'>
-            <img src='./images/logo.png' alt='' />  
-            <span>King Tut Tours</span>
+            <img src='./images/logo.jpg' alt='' />  
+            <span>Soho Tours Egyt Tours</span>
           </div>
           <div className='nav'>
             {navList&&

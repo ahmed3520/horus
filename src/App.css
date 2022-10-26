@@ -360,6 +360,9 @@ grid-gap: 30px;
   .filter-h{
     width: 55% !important;
   }
+  .back h1{
+    font-size: 25px;
+  }
 }
 @media (max-width:500px){
   .box{
