@@ -12,7 +12,7 @@ const Hero = () => {
             <h1>Search Your Next</h1>
             <h1>Soho Tours </h1>
             <h1>Egy Trip </h1>
-            <p>{'Find new & featured Soho Tours EgyT Trips.'}</p>
+            <p>{'Find new & featured Soho  Egy Trips.'}</p>
          </div>
           <form className='flex'>
             <div className='box'>

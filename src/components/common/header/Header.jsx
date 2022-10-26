@@ -12,7 +12,7 @@ const Header = () => {
         <div className='container flex'>
           <div className='logo'>
             <img src='./images/logo.jpg' alt='' />  
-            <span>Soho Tours Egyt Tours</span>
+            <span>Soho Tours Egy</span>
           </div>
           <div className='nav'>
             {navList&&
