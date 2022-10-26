@@ -62,4 +62,7 @@
     form input {
       width: 100%;
     }
+    .hero h1 {
+      font-size: 35px !important;
+    }
   }
