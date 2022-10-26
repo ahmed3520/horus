@@ -7,8 +7,13 @@ const Hero = () => {
     <>
       <section className='hero'>
         <div className='container'>
-          <Heading title='Search Your Next Soho Tours Egy Trip ' subtitle='Find new & featured Soho Tours EgyT Trips.' />
-
+        
+          <div className='heading'>
+            <h1>Search Your Next</h1>
+            <h1>Soho Tours </h1>
+            <h1>Egy Trip </h1>
+            <p>{'Find new & featured Soho Tours EgyT Trips.'}</p>
+         </div>
           <form className='flex'>
             <div className='box'>
               <span>City/Street</span>
