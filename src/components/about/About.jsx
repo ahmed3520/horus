@@ -13,7 +13,7 @@ const About = () => {
           <div className='left row'>
             <Heading title='Our Agency Story' subtitle='Check out our company story and work process' />
 
-            <p>Soho Tours EgyT Tours, Egypt’s travel experts, offer private, tailor-made tours, for families, small groups, and retreats.</p>
+            <p>Soho Tours Egy, Egypt’s travel experts, offer private, tailor-made tours, for families, small groups, and retreats.</p>
             <p>Get immersed in the Egyptian culture and history while receiving new perspectives from locals. When you book with us, you become family.</p>
             <p>Our staff holds a plethora of not only historical knowledge, but day-to-day living to make your trip memorable.</p>
             
