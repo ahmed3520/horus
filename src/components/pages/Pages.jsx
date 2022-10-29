@@ -1,8 +1,8 @@
 import React from "react"
-import Header from "../common/header/Header"
+import Header from "../common/header/Header.jsx"
 import { BrowserRouter as Router, Routes, Route,Link,NavLink } from "react-router-dom"
 import Home from "../home/Home"
-import Footer from "../common/footer/Footer"
+import Footer from "../common/footer/Footer.jsx"
 import About from "../about/About"
 import Pricing from "../pricing/Pricing"
 import Blog from "../blog/Blog"
@@ -28,7 +28,7 @@ const Pages = () => {
           <Route exact path='/blog' element={<Blog/>} />
           <Route exact path='/pricing' element={<Pricing/>} />
           <Route exact path='/contact' element={<Contact/>} />
-          <Route exact path="/book" element={<Description/>}/>
+          <Route exact path="/book/:id" element={<Description/>}/>
         </Routes>
         <Footer />
       </Router>

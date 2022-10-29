@@ -1,6 +1,8 @@
 import React from 'react'
 
 const DescriptionCont = ({data}) => {
+    console.log('description data=>',data)
+    data= data[0];
   return (
     <>
     <div className='dsc-cont'>
@@ -31,7 +33,7 @@ const DescriptionCont = ({data}) => {
                     <tr>
                         <td>Tour Availability</td>
                         <td>
-                            <p>{data.availability}</p></td>
+                            <p>{data.toursAvailability}</p></td>
                     </tr>
                     <tr className='hr-tr'></tr>
 
@@ -52,6 +54,7 @@ const DescriptionCont = ({data}) => {
                             {data.tourType}
                                 </p></td>
                     </tr>
+              
                 </tbody>
             </table>
         </div>
@@ -70,6 +73,19 @@ const DescriptionCont = ({data}) => {
             </div>
         </div>
         <div className='tours-ie'>
+            <div className='tours-ie-wrapper'>
+                        <strong>Tour Includes</strong>
+                        <td>
+                        <div dangerouslySetInnerHTML={{__html: data.toursInclude}}></div>
+                        </td>
+                  </div>
+            <div className='tours-ie-wrapper'>
+
+                    <strong>Tour Excludes</strong>
+                    <div dangerouslySetInnerHTML={{__html: data.toursExclude}}></div>
+
+                  </div>
+
         </div>
     </div>
     </>
