@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
-import { getTripDataFromFireStore } from '../../Helpers/firebase'
+import { getTripDataFromFireStore, postTripBook } from '../../Helpers/firebase'
 import DescriptionCont from './DescriptionCont'
 import { useParams } from "react-router-dom";
 import Itr from './Itr';
 import PricePolicy from './Price';
-
+import DatePicker from "./data-picker.jsx";
 {/*const data={
     title:'4 Days Alexandria & Al Alamein Tour Package – Egypt Honeymoon Trip',
     description:'We give you the opportunity to enjoy short trip packages from Egypt to Alexandria and El Alamein. This package is specially designed for those who do not have much time in Egypt to discover the most beautiful places in Alexandria and El Alamein.',
@@ -23,10 +23,16 @@ import PricePolicy from './Price';
     toursExclude:[""]
 
 }*/}
+
+
 const Description = () => {
     let { id } = useParams();
     const [data,setData] = useState([])
     const [filter,setFilter] = useState('dsc')
+    const [startDate, setStartDate] = useState(null);
+    const [endDate, setEndDate] = useState(null);
+    const [bookData,setBookData] = useState({fullName:'',email:'',phoneNumber:'', message:''});
+    const [alert,setAlert] = useState('')
     useEffect(()=>{
         const fetchData = async () => {
             try {
@@ -39,7 +45,22 @@ const Description = () => {
           }
           fetchData();
     },[])
-    console.log('data pr=>',data)
+    async function handleSubmit(e){
+      e.preventDefault();
+      if(!bookData.email || !bookData.fullName || !bookData.phoneNumber){
+        setAlert('All Fields are required!')
+        return
+      }
+      bookData.startDate = startDate?._d;
+      bookData.endDate = endDate?._d;
+      bookData.tripName=data[0]?.title;
+      bookData.tripID=data[0]?._id;
+      const postDataBook = await postTripBook(bookData);
+      console.log("post book data=>",postDataBook)
+      setAlert('Booked Successfully')
+      return
+
+    }
   return (
     <div className='book-cont'>
         <div className='col w-25'></div>
@@ -57,7 +78,54 @@ const Description = () => {
 
 
         </div>
-        <div className='col'></div>
+        {console.log('daga->',data)}
+        <div className='col-lg col-book'>
+          <div className='bool-container'>
+            <div className='book-card-title'>
+              <h3>Book This Tour</h3>
+              <div className="prc-widget">
+                <h3>{data[0]?.pricePerDay}</h3>
+                <span>Per Day</span>
+              </div>
+            </div>
+            <div className='book-card-content'>
+              <form id='booking-form' onSubmit={handleSubmit}>
+                <div className='booking-form-wrapper'>
+                  
+                  <div className='booking-form-row'>
+                    <input placeholder='Your Full Name' onChange={e=>
+                       setBookData({ ...bookData, fullName: e.target.value })
+                    }/>
+                  </div>
+                  <div className='booking-form-row'>
+                    <input placeholder='Your Email' onChange={e=>
+                       setBookData({ ...bookData, email: e.target.value })
+                    }/>
+                  </div>
+                  <div className='booking-form-row'>
+                    <input placeholder='Your Phone' onChange={e=>
+                       setBookData({ ...bookData, phoneNumber: e.target.value })
+                    }/>
+                  </div>
+                  
+                  <div className='booking-form-row'>
+                    <input placeholder='Your Message'
+                    onChange={e=>
+                      setBookData({ ...bookData, message: e.target.value })
+                   }/>
+                  </div>
+                  <DatePicker startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}/>
+                  <div className='booking-form-row'>
+                    {alert.length>0?<span>{alert}</span>:<></>}
+                    <button type='submit'>
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
     </div>
   )
 }

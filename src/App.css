@@ -180,6 +180,7 @@ img {
 }
 .book-cont{
   width: 100%;
+  display: flex;
 }
 .w-25{
   width: 25% !important;
@@ -246,7 +247,7 @@ img {
   background-color: #003480;
   color: #fff;
 }
-table tr{
+.desc-table table tr{
   border: 1px solid #000 !important;
   margin-bottom: 2px;
 }
@@ -294,6 +295,72 @@ color: #000;
 .filter-h h4{
   margin-right: 0.5em;
 }
+.col-lg{
+  flex: 0 0 auto;
+width: 33.3333333333%;
+}
+.bool-container{
+  border-radius: 5px;
+  box-shadow: 3px 5px 35px rgba(86,68,169,.1);
+  width: 70%;
+  height: fit-content;
+  margin-top: 2em;
+  margin-left: 1em;
+}
+.book-card-content{
+  padding: 20px;
+}
+.book-card-title{
+  background: #162b32;
+  border-radius: 5px;
+  padding: 13px 20px;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+.DateRangePicker{
+  width: 100%;
+}
+.DateRangePicker .DateRangePickerInput {
+  width: 100%;
+}
+.prc-widget{
+  display: flex;
+  align-items: center;
+}
+.prc-widget h3{
+  color: #27ae60;
+font-size: 25px;
+font-weight: 700;
+}
+.prc-widget span{
+  color: #fff;
+font-size: 15px;
+font-weight: 500;
+}
+
+#booking-form{
+  padding: 0 !important;
+  
+  padding-top: 0.2em;
+
+  margin-top: 0 !important;
+}
+.dp-app{
+  margin-top: 0.8em;
+}
+.booking-form-row{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 0.8em;
+  justify-content: center;
+  align-items: center;
+}
+.booking-form-row button{
+  width: 25%;
+}
 @media (max-width:1300px) {
   .container{
     max-width: 100%;
@@ -301,6 +368,18 @@ color: #000;
   }
   .whatsapp_float{
     left: 0px !important;
+  }
+  .book-cont .col:nth-child(1){
+    display: none;
+  }
+  .book-cont{
+    justify-content: space-around;
+  }
+  .cont-dsc{
+    width: 55%;
+  }
+  .bool-container{
+    width: 100%;
   }
 }
 @media (max-width:1100px){
@@ -329,7 +408,22 @@ grid-gap: 30px;
   .filter-h{
     width: 35% !important;
   }
- 
+ .book-cont{
+  flex-direction: column;
+  align-items: center;
+ }
+ .cont-dsc{
+  width: 100%;
+ }
+ .col-book{
+  width: 80%;
+ }
+ .booking-form-wrapper{
+  width: 100%;
+ }
+ .bool-container{
+  margin-left: 0;
+ }
 }
 @media (max-width:780px){
   .box{
@@ -373,4 +467,10 @@ grid-gap: 30px;
   .filter-h h4{
     display: none;
   }
+  .col-book{
+    width: 100%;
+   }
+   .book-card-title{
+    margin: 0 0.8em;
+   }
 }

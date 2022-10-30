@@ -23,4 +23,12 @@ async function getTripDataFromFireStore(id) {
   console.log("query snap shot=>", querySnapshot);
   return querySnapshot.docs.map((doc) => doc.data());
 }
-export { getTripsDataFromFireStore, getTripDataFromFireStore };
+
+async function postTripBook(data) {
+  console.log("data posted=>", data);
+  const tripCollection = doc(collection(db, "book"));
+  const tripsRes = await setDoc(tripCollection, data);
+  console.log("tripRes", tripsRes);
+  return tripsRes;
+}
+export { getTripsDataFromFireStore, getTripDataFromFireStore, postTripBook };
