@@ -8,8 +8,13 @@ const RecentCard = () => {
   const [dataTrip,setDataTrip] = useState();
   const navigate = useNavigate();
   const handleClick = (e,id) => {
-    navigate(`/book/${id}`);
+    window.location.href=`/book/${id}`;
 }
+useEffect(()=>{
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+})
 useEffect(()=>{
   const fetchData = async () => {
     try {

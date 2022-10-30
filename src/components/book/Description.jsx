@@ -63,6 +63,8 @@ const Description = () => {
     }
   return (
     <div className='book-cont'>
+      {data?
+      <>
         <div className='col w-25'></div>
         <div className='cont-dsc col'>
             <nav className='nav-f flex'>
@@ -126,6 +128,10 @@ const Description = () => {
             </div>
           </div>
         </div>
+            </>
+    :
+    <i class="gg-spinner"></i>
+    }
     </div>
   )
 }

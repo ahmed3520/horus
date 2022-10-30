@@ -9,7 +9,7 @@ const Recent = () => {
     <>
       <section className='recent padding'>
         <div className='container'>
-          <Heading title='Recent Trips Visited' subtitle='This Trips May Like You Have A Nice Holidy With Soho  Egy.' />
+          <Heading title='Recent Trips Visited' subtitle='Tours that you might like. Have a nice holiday with Soho Egy.' />
           <RecentCard />
           
         </div>
