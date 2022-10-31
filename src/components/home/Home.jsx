@@ -13,7 +13,7 @@ const Home = () => {
     <>
       
       <Hero />
-      <Featured />
+    {/*  <Featured />*/}
       <Recent />
       <Location />
       
