@@ -87,7 +87,7 @@ const Description = () => {
               <h3>Book This Tour</h3>
               <div className="prc-widget">
                 <h3>{data[0]?.pricePerDay}</h3>
-                <span>Per Day</span>
+                <span>Per Person</span>
               </div>
             </div>
             <div className='book-card-content'>
