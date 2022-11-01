@@ -3983,7 +3983,7 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
-date-fns@^2.29.2:
+date-fns@^2.29.2, date-fns@^2.29.3:
   version "2.29.3"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
   integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
@@ -8072,6 +8072,11 @@ react-dates@^21.8.0:
     react-with-direction "^1.3.1"
     react-with-styles "^4.1.0"
     react-with-styles-interface-css "^6.0.0"
+
+react-day-picker@^8.3.5:
+  version "8.3.5"
+  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-8.3.5.tgz#db00f7657e71f697055dcecbe2d9e91f84e4b026"
+  integrity sha512-cSMNjbn5IKZLVgfvPopbg+Dk5qQPesi2prlxXBrXlCODUThk5Zyu5fDn7njZt3y7ih65gWbZId0D0lnhyiF1GQ==
 
 react-dev-utils@^12.0.1:
   version "12.0.1"

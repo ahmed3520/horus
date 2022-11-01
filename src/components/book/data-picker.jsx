@@ -1,27 +1,22 @@
 import React, { useState } from "react";
-import "react-dates/initialize";
-import { DateRangePicker } from "react-dates";
-import "react-dates/lib/css/_datepicker.css";
+import { format } from 'date-fns';
+import { DayPicker } from 'react-day-picker';
+import 'react-day-picker/dist/style.css';
 
 function DatePicker({startDate,setStartDate, endDate,setEndDate}) {
 
-  const [focusedInput, setFocusedInput] = useState(null);
-  const handleDatesChange = ({ startDate, endDate }) => {
-    setStartDate(startDate);
-    setEndDate(endDate);
-  };
+  const [selected, setSelected] = React.useState();
+  let footer = <p>Please pick a day.</p>;
+  if (startDate) {
+    footer = <p>You picked {format(startDate, 'PP')}.</p>;
+  }
   return (
-    <div className="dp-app">
-      <DateRangePicker
-        startDate={startDate}
-        startDateId="ata-start-date"
-        endDate={endDate}
-        endDateId="ata-end-date"
-        onDatesChange={handleDatesChange}
-        focusedInput={focusedInput}
-        onFocusChange={focusedInput => setFocusedInput(focusedInput)}
-      />
-    </div>
+    <DayPicker
+      mode="single"
+      selected={startDate}
+      onSelect={setStartDate}
+      footer={footer}
+    />
   );
 }
 

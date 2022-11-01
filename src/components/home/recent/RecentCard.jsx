@@ -52,7 +52,7 @@ console.log('res recent card=>',dataTrip)
                 <div>
                 
                   <button className='btn2' onClick={e=>handleClick(e,_id)}>Book {pricePerDay}</button> 
-                  <label htmlFor='Price'>/Day</label>
+                  <label htmlFor='Price'>/Person</label>
                 </div>
                 <span>{duration}</span>
               </div>

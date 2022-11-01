@@ -359,7 +359,7 @@ font-weight: 500;
   align-items: center;
 }
 .booking-form-row button{
-  width: 25%;
+  width: 35%;
 }
 
 .gg-spinner {
@@ -399,6 +399,16 @@ font-weight: 500;
   0% { transform: rotate(0deg) }
   to { transform: rotate(359deg) }
  } 
+ .rdp-months{
+  width: 100% !important;
+ }
+ .rdp-month{
+  width: 100%;
+ }
+ .rdp-table{
+  width: 100% !important;
+  max-width: 100% !important;
+ }
 @media (max-width:1300px) {
   .container{
     max-width: 100%;

@@ -51,8 +51,7 @@ const Description = () => {
         setAlert('All Fields are required!')
         return
       }
-      bookData.startDate = startDate?._d;
-      bookData.endDate = endDate?._d;
+      bookData.startDate = startDate;
       bookData.tripName=data[0]?.title;
       bookData.tripID=data[0]?._id;
       const postDataBook = await postTripBook(bookData);
@@ -61,6 +60,7 @@ const Description = () => {
       return
 
     }
+    console.log('startDate data=>',startDate)
   return (
     <div className='book-cont'>
       {data?
@@ -116,7 +116,7 @@ const Description = () => {
                       setBookData({ ...bookData, message: e.target.value })
                    }/>
                   </div>
-                  <DatePicker startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate}/>
+                  <DatePicker startDate={startDate} setStartDate={setStartDate} />
                   <div className='booking-form-row'>
                     {alert.length>0?<span>{alert}</span>:<></>}
                     <button type='submit'>
