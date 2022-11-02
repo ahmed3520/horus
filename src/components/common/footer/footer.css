@@ -58,7 +58,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-   
+
     .whatsapp_float{
       display: flex;
       justify-content:flex-end;
@@ -95,4 +95,20 @@ grid-template-columns: 7fr 4fr 4fr !important;
   }
   a{
     color: #27ae60;
+  }
+
+  @media screen and (max-width: 800px) {
+    .w-footer{
+    max-width: 98%;
+    width: 95% !important;
+    display: flex !important;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex: 1;
+    flex-wrap: wrap;
+    }
+    .cont-b{
+      width: 100%;
+      max-width: 100%;
+    }
   }
