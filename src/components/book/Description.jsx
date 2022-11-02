@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import Itr from './Itr';
 import PricePolicy from './Price';
 import DatePicker from "./data-picker.jsx";
+import emailjs from '@emailjs/browser';
 {/*const data={
     title:'4 Days Alexandria & Al Alamein Tour Package – Egypt Honeymoon Trip',
     description:'We give you the opportunity to enjoy short trip packages from Egypt to Alexandria and El Alamein. This package is specially designed for those who do not have much time in Egypt to discover the most beautiful places in Alexandria and El Alamein.',
@@ -45,6 +46,20 @@ const Description = () => {
           }
           fetchData();
     },[])
+    async function handleSubmitEmail(){
+
+      const templateParams = {
+        from_name: bookData.fullName,
+        tour_name: data[0]?.title,
+        user_phone:bookData.phoneNumber
+    };
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID,'template_cqxlr08', templateParams, process.env.REACT_APP_EMAILJS_PUBLIC_KEY, process.env.REACT_APP_EMAILJS)
+    .then((response) => {
+       console.log('SUCCESS!', response.status, response.text);
+    }, (err) => {
+       console.log('FAILED...', err);
+    });
+    }
     async function handleSubmit(e){
       e.preventDefault();
       if(!bookData.email || !bookData.fullName || !bookData.phoneNumber){
@@ -57,6 +72,7 @@ const Description = () => {
       const postDataBook = await postTripBook(bookData);
       console.log("post book data=>",postDataBook)
       setAlert('Booked Successfully')
+      handleSubmitEmail()
       return
 
     }
