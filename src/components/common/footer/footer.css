@@ -72,4 +72,27 @@
   .whatsapp_float img{
     width: 100px;
   }
-  
+  .flex-col{
+    flex-direction: column;
+  }
+  .sub-inp{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .sub-btn{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding: 17px 25px;
+  }
+  .w-footer{
+    display: grid !important;
+grid-template-columns: 7fr 4fr 4fr !important; 
+    max-width: 98%;
+    width: 95% !important;
+  }
+  .cont-b{
+    max-width: 55%;
+  }
+  a{
+    color: #27ae60;
+  }
