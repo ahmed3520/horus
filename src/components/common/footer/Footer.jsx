@@ -10,13 +10,13 @@ const Footer = () => {
           <div className='send flex'>
             <div className='text'>
               <h1>Do You Have Questions ?</h1>
-              <p>We'll help you to Enjoy with Your Holiday In Egypt.</p>
+              <p>We’ll help you enjoy your holiday in Egypt.</p>
             </div>
             </div>
             </div>
             <div className="whatsapp_float">
             
-             <a aria-label="Chat on WhatsApp" href="https://wa.me/+201008362902"> <img alt="Chat on WhatsApp" src="whatsapp-icon.png" /></a>
+             <a aria-label="Chat on WhatsApp" href="https://wa.me/+201008362902"> <img alt="Chat on WhatsApp" src="/whatsapp-icon.png" /></a>
 
             
 
@@ -53,7 +53,7 @@ const Footer = () => {
           }
           </>
           <div className='box'>
-              <h3>Your can contact us on these numbers:</h3>
+              <h3>You can contact us at these numbers:</h3>
               <ul>
                 <li>
                 <a href="tel:+201008362902" class="Blondie">
@@ -69,7 +69,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className='box'>
-              <h3>Your can reach us on by mail:</h3>
+              <h3>You can reach us by email at:</h3>
               <ul>
                 <li>
                 <a href="mailto:mohamedfathi00@yahoo.com">mohamedfathi00@yahoo.com</a>

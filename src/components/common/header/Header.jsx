@@ -11,7 +11,7 @@ const Header = () => {
       <header>
         <div className='container flex'>
           <div className='logo'>
-            <img src='./images/logo.jpg' alt='' />  
+            <img src='/images/logo.jpg' alt='' />  
             <span>Soho Tours Egy</span>
           </div>
 
