@@ -52,8 +52,8 @@ const Description = () => {
         from_name: bookData.fullName,
         tour_name: data[0]?.title,
         user_phone:bookData.phoneNumber,
-        sur_name:bookData.fullName,
-        booked_data:startDate
+        sur_name:bookData?.fullName||'',
+        booked_data:startDate.toString(),
     };
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID,'template_cqxlr08', templateParams, process.env.REACT_APP_EMAILJS_PUBLIC_KEY, process.env.REACT_APP_EMAILJS)
     .then((response) => {
