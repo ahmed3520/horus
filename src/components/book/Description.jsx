@@ -54,6 +54,7 @@ const Description = () => {
         user_phone:bookData.phoneNumber,
         sur_name:bookData?.fullName||'',
         booked_data:startDate.toString(),
+        nationality: bookData?.nationality||'',
     };
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID,'template_cqxlr08', templateParams, process.env.REACT_APP_EMAILJS_PUBLIC_KEY, process.env.REACT_APP_EMAILJS)
     .then((response) => {
@@ -64,7 +65,7 @@ const Description = () => {
     }
     async function handleSubmit(e){
       e.preventDefault();
-      if(!bookData.email || !bookData.fullName || !bookData.phoneNumber){
+      if(!bookData.email || !bookData.fullName || !bookData.phoneNumber || !bookData.nationality){
         setAlert('All Fields are required!')
         return
       }
@@ -127,7 +128,12 @@ const Description = () => {
                        setBookData({ ...bookData, phoneNumber: e.target.value })
                     }/>
                   </div>
-                  
+
+                  <div className='booking-form-row'>
+                  <input placeholder='Your Nationality' onChange={e=>
+                       setBookData({ ...bookData, nationality: e.target.value })
+                    }/>
+                  </div>
                   <div className='booking-form-row'>
                     <input placeholder='Your Message'
                     onChange={e=>
