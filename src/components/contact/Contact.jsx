@@ -10,7 +10,8 @@ const Contact = () => {
   const [message, setMessage] = React.useState("")
   const [error, setError] = React.useState(false)
   const [success, setSuccess] = React.useState(false)
-const [Subject, setSubject] = React.useState("")
+  const [Subject, setSubject] = React.useState("")
+  const [loading, setLoading] = React.useState(false)
 
 function submitEmail(e){
   e.preventDefault();
@@ -19,6 +20,7 @@ function submitEmail(e){
   }else{
     setError(false)
   }
+  setLoading(true)
   const templateParams = {
     from_name: name,
     message: message,
@@ -29,8 +31,10 @@ emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID,'template_srz0m6h', templa
 .then((response) => {
    console.log('SUCCESS!', response.status, response.text);
     setSuccess(true)
+    setLoading(false)
 }, (err) => {
    console.log('FAILED...', err);
+   setLoading(false)
 });
 }
 React.useEffect(() => {
@@ -56,7 +60,7 @@ React.useEffect(() => {
             <textarea cols='30' rows='10' onChange={e=>setMessage(e.target.value)}></textarea>
             {error && <p className='error'>All Fields are required!</p>}
             {success && <p className='success'>Message Sent Successfully!</p>}
-            <button type="submit">Submit Request</button>
+            <button type="submit" disabled={loading} >Submit Request</button>
           </form>
         </div>
       </section>
